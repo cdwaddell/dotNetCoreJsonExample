@@ -1,0 +1,130 @@
+﻿
+body {
+	padding-top: 51px;
+}
+
+.text-center {
+	padding-top: 20px;
+}
+
+#sidebar {
+	padding-right: 0;
+	padding-top: 20px;
+}
+
+.drop {
+	height: 60px;
+	border: gray dashed 2px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 60px;
+	color: gray;
+	background-color: lightgray;
+}
+
+.navbar-toggle {
+	float: left;
+	margin-left: 15px;
+	margin-right: 0;
+}
+
+.navbar-default {
+	background-color: white;
+	border: none;
+}
+
+.nav > li > a {
+	margin-right: 10px;
+}
+
+.nav > li.active a {
+	background-color: lightgray;
+	color: gray;
+	cursor: default;
+}
+
+.nav > li > a > i {
+	float: right;
+	width: 10px;
+	color: gray;
+	cursor: move;
+}
+
+.pager li {
+	cursor: pointer;
+}
+
+.pager li.disabled a {
+	background-color: lightgray;
+	color: gray;
+}
+
+.pager li.disabled a:hover {
+	background-color: lightgray;
+	color: gray;
+	cursor: default;
+}
+
+.pager li a {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100px;
+}
+
+.pager li:first-child {
+	float: left;
+}
+
+.pager li:last-child {
+	float: right;
+}
+
+.pager li:last-child::after {
+	clear: both;
+}
+
+.footnav {
+	position: relative;
+	bottom: 0;
+}
+
+/* Do not show the nav bar when large */
+@media screen and (min-width: 767px) {
+	.navbar {
+		display: none;
+	}
+
+	body {
+		padding-top: 20px;
+	}
+}
+
+/* When small we need to colapse the sidebar */
+@media screen and (max-width: 767px) {
+	.row-offcanvas {
+		position: relative;
+		-webkit-transition: all 0.25s ease-out;
+		-moz-transition: all 0.25s ease-out;
+		-ms-transition: all 0.25s ease-out;
+		-o-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+	}
+
+	.row-offcanvas-left .sidebar-offcanvas {
+		left: -41.6%;
+	}
+
+	.row-offcanvas-left.active {
+		left: 41.6%;
+	}
+
+	.sidebar-offcanvas {
+		position: absolute;
+		top: 0;
+		width: 41.6%;
+	}
+
+	#sidebar {
+		padding-top: 0;
+	}
+}

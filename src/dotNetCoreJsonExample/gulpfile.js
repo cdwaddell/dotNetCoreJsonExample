@@ -1,10 +1,23 @@
-﻿/*
-This file in the main entry point for defining Gulp tasks and using Gulp plugins.
-Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
-*/
+﻿"use strict";
 
-var gulp = require('gulp');
+var gulp = require("gulp"),
+  mainBowerFiles = require('main-bower-files');
 
-gulp.task('default', function () {
-    // place code for your default task here
+var webroot = "./wwwroot/";
+var paths = {
+  webroot: webroot,
+  bowerfiles: "./bower_components/",
+  bowerJsDest: webroot + "Scripts/"
+};
+
+gulp.task("bowercopy", function () {
+  return gulp.src(
+          mainBowerFiles({
+            overrides: {
+              "phaser": { "main": "**/phaser.*js" }
+            }
+          })
+      ).pipe(gulp.dest(paths.bowerJsDest));
 });
+
+gulp.task('default', ["bowercopy"]);

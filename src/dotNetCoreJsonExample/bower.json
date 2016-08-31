@@ -1,0 +1,21 @@
+{
+  "name": "asp.net",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Charles D Waddell <cdwaddell@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cdwaddell/dotNetCoreJsonExample",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout-dragdrop": "~2.4.4"
+  }
+}

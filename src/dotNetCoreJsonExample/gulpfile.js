@@ -14,7 +14,7 @@ gulp.task("bowercopy", function () {
   return gulp.src(
           mainBowerFiles({
             overrides: {
-              "phaser": { "main": "**/phaser.*js" }
+              "knockout-mapping": { "main": "**/knockout.mapping.*js" }
             }
           })
       ).pipe(gulp.dest(paths.bowerJsDest));
